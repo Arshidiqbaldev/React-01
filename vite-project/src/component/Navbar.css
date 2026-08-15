@@ -1,0 +1,11 @@
+.navMenu {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-transform: uppercase;
+}
+
