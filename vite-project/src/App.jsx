@@ -1,14 +1,22 @@
 import React from 'react'
 import './App.css'
+import Navbar from './component/Navbar';
+import Card from './component/Card';
 
 function App() {
 
   return (
     <>
       <div className="parent">
-        <h1 className='h-1' >ARSHID IQBAL</h1>
-        <p className='p-1' >Helping businesses establish a strong online presence through modern, high-performing WordPress websites.</p>
-        <a href="https://arshidiqbal.net" target='_blank' className='btn-1' >Contact</a>
+
+
+        <Navbar />
+
+        <Card name="arshid" desc="Helping businesses establish a strong online presence through modern, high-performing WordPress websites." link="https://arshidiqbal.net" style={{ "border-radius": "10px", "background": "#F6090020" }} />
+        <Card name="Ali" desc="Helping businesses establish a strong online presence through modern, high-performing WordPress websites." link="https://arshidiqbal.net" style={{ "border-radius": "10px", "background": "#00a0f620" }} />
+        <Card name="Zaid" desc="Helping businesses establish a strong online presence through modern, high-performing WordPress websites." link="https://arshidiqbal.net" style={{ "border-radius": "10px", "background": "#d900f620" }} />
+
+
       </div>
     </>
   );

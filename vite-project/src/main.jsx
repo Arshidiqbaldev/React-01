@@ -9,7 +9,3 @@ createRoot(document.getElementById('root')).render(
 
 )
 
-createRoot(document.getElementById('header')).render(
-  <Navbar />
-
-)

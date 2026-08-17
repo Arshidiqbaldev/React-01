@@ -4,7 +4,7 @@ import './Navbar.css'
 
 function Navbar() {
     return (
-        <header>
+        <header className='header-1'>
 
             <ul className='navMenu' >
                 <li>home</li>
