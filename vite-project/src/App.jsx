@@ -4,6 +4,11 @@ import Navbar from './component/Navbar';
 import Card from './component/Card';
 import Counter from './component/Counter';
 import Clock from './component/Clock';
+import vite from './assets/hero.png';
+import react from './assets/react.svg';
+import viteSvg from './assets/vite.svg';
+
+
 
 function App() {
 
@@ -13,11 +18,11 @@ function App() {
 
 
         <Navbar />
-        <Card name="arshid" desc="Helping businesses establish a strong online presence through modern, high-performing WordPress websites." link="https://arshidiqbal.net" style={{ "border-radius": "10px", "background": "#F6090020" }} />
-        <Card name="Ali" desc="Helping businesses establish a strong online presence through modern, high-performing WordPress websites." link="https://arshidiqbal.net" style={{ "border-radius": "10px", "background": "#00a0f620" }} />
-        <Card name="Zaid" desc="Helping businesses establish a strong online presence through modern, high-performing WordPress websites." link="https://arshidiqbal.net/contact.html" style={{ "border-radius": "10px", "background": "#d900f620" }} />
+        <Card name="arshid" image={vite} desc="Helping businesses establish a strong online presence through modern, high-performing WordPress websites." link="https://arshidiqbal.net" style={{ "border-radius": "10px", "background": "#F6090020" }} />
+        <Card name="Ali" image={react} desc="Helping businesses establish a strong online presence through modern, high-performing WordPress websites." link="https://arshidiqbal.net" style={{ "border-radius": "10px", "background": "#00a0f620" }} />
+        <Card name="Zaid" image={viteSvg} desc="Helping businesses establish a strong online presence through modern, high-performing WordPress websites." link="https://arshidiqbal.net/contact.html" style={{ "border-radius": "10px", "background": "#d900f620" }} />
         <Counter />
-        <Clock/>
+        <Clock />
 
       </div>
 
