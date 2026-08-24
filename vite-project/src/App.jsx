@@ -18,9 +18,9 @@ function App() {
 
 
         <Navbar />
-        <Card name="arshid" image={vite} desc="Helping businesses establish a strong online presence through modern, high-performing WordPress websites." link="https://arshidiqbal.net" style={{ "border-radius": "10px", "background": "#F6090020" }} />
-        <Card name="Ali" image={react} desc="Helping businesses establish a strong online presence through modern, high-performing WordPress websites." link="https://arshidiqbal.net" style={{ "border-radius": "10px", "background": "#00a0f620" }} />
-        <Card name="Zaid" image={viteSvg} desc="Helping businesses establish a strong online presence through modern, high-performing WordPress websites." link="https://arshidiqbal.net/contact.html" style={{ "border-radius": "10px", "background": "#d900f620" }} />
+        <Card name="arshid" image={vite} desc="Helping businesses establish a strong online presence through modern, high-performing WordPress websites." link="https://arshidiqbal.net" style={{ "border-radius": "12px", "background": "#0067f620" }} />
+        <Card name="Ali" image={react} desc="Helping businesses establish a strong online presence through modern, high-performing WordPress websites." link="https://arshidiqbal.net" style={{ "border-radius": "12px", "background": "#00a0f620" }} />
+        <Card name="Zaid" image={viteSvg} desc="Helping businesses establish a strong online presence through modern, high-performing WordPress websites." link="https://arshidiqbal.net/contact.html" style={{ "border-radius": "12px", "background": "#ea5bfc20" }} />
         <Counter />
         <Clock />
 
