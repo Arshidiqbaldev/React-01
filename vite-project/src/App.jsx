@@ -1,19 +1,40 @@
 import React, { useState } from "react";
 import "./App.css";
-import Counter from "./component/Counter";
+import Navbar from "./component/Navbar";
+import viteSvg from "./assets/hero.png";
+import vitefav from "./assets/vite.svg";
+import Hero from "./component/Hero";
 
 function App() {
-  const [count, setCount] = useState(0);
-  const [scaled, setScaled] = useState(false);
-  function clickMe() {
-    setCount(count + 1);
-    setScaled(true);
-  }
   return (
     <div className="parent">
-      <Counter classN="children" handleClick={clickMe} text="click me">
-        <h1 className={`head-1 ${scaled ? "scale-1" : ""}`}>{count}</h1>
-      </Counter>
+      <Navbar>
+        <img src={viteSvg} alt={viteSvg} className="logo" />
+
+        <ul className="list">
+          <li>
+            <a href="#Home">Home</a>
+          </li>
+
+          <li>
+            <a href="About">About</a>
+          </li>
+
+          <li>
+            <a href="Contact">Contact</a>
+          </li>
+
+          <li>
+            <a href="Email">Email</a>
+          </li>
+        </ul>
+
+        <button className="btn">Contact</button>
+      </Navbar>
+
+      <Hero/>
+
+
     </div>
   );
 }
