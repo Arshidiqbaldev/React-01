@@ -19,6 +19,7 @@
 .children {
   width: 100%;
   display: flex;
+  max-width: 400px;
   flex-direction: column;
   gap: 1rem;
   align-items: center;
@@ -53,7 +54,7 @@
 
 .btn,
 .btn-1 {
-  padding: 10px 20px;
+  padding: 8px 20px;
   background: orangered;
   color: #000000;
   text-decoration: none;
@@ -64,10 +65,10 @@
   font-family: inherit;
   font-weight: 500;
   cursor: pointer;
-  box-shadow:
-    0px 1.5px 1px 0px #858686ac,
-    0px 2px 2px -1px #757676e0 inset;
+  
   corner-shape: squircle;
+
+
 }
 
 .red-tag {

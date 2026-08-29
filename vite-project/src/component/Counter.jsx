@@ -1,17 +1,17 @@
 import React from "react";
 
-
-function Counter(props) {
+function Counter({ title, isActive, children, onShow }) {
   return (
-    <>
-
-      <input type="text" name="input" id="input" onChange={(e)=>{
-        props.setCount(e.target.value.toString());
-      }} />
-
-     <p className="para" >{props.title}{props.count}</p>
-    
-    </>
+    <div className="children">
+      <h3 className="head-1">{title}</h3>
+      {isActive ? (
+        <p className="para">{children}</p>
+      ) : (
+        <button className="btn" onClick={onShow}>
+          Show
+        </button>
+      )}
+    </div>
   );
 }
 
