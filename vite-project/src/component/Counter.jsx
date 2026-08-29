@@ -3,12 +3,15 @@ import React from "react";
 
 function Counter(props) {
   return (
-    <div className={props.classN}>
-      {props.children}
-      <button onClick={props.handleClick} className="btn">
-        {props.text}
-      </button>
-    </div>
+    <>
+
+      <input type="text" name="input" id="input" onChange={(e)=>{
+        props.setCount(e.target.value.toString());
+      }} />
+
+     <p className="para" >{props.title}{props.count}</p>
+    
+    </>
   );
 }
 

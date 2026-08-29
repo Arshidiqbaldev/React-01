@@ -4,37 +4,18 @@ import Navbar from "./component/Navbar";
 import viteSvg from "./assets/hero.png";
 import vitefav from "./assets/vite.svg";
 import Hero from "./component/Hero";
+import Counter from "./component/Counter";
 
 function App() {
+  const [count, setCount] = useState("");
+
   return (
     <div className="parent">
-      <Navbar>
-        <img src={viteSvg} alt={viteSvg} className="logo" />
+      <div className="children">
+        <Counter title="title-1: " count={count} setCount={setCount} />
 
-        <ul className="list">
-          <li>
-            <a href="#Home">Home</a>
-          </li>
-
-          <li>
-            <a href="About">About</a>
-          </li>
-
-          <li>
-            <a href="Contact">Contact</a>
-          </li>
-
-          <li>
-            <a href="Email">Email</a>
-          </li>
-        </ul>
-
-        <button className="btn">Contact</button>
-      </Navbar>
-
-      <Hero/>
-
-
+        <Counter title="title-2: " count={count} setCount={setCount} />
+      </div>
     </div>
   );
 }
