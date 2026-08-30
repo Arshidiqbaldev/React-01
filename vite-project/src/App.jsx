@@ -20,6 +20,8 @@ function App() {
       >
         With a population of about 2 million, Almaty is Kazakhstan's largest
         city. From 1929 to 1997, it was its capital city.
+
+        <img src={viteSvg} alt={viteSvg} />
       </Counter>
 
       <Counter
@@ -34,6 +36,21 @@ function App() {
         cupiditate iusto eveniet, ad adipisci nesciunt aperiam! Aliquam, commodi
         dolorum.
       </Counter>
+
+       <Counter
+        title="ipsum"
+        isActive={activeIndex === 2}
+        onShow={() => {
+          setActiveIndex(2);
+        }}
+      >
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum est hic
+        perspiciatis ex assumenda id non, expedita, doloremque quia error
+        cupiditate iusto eveniet, ad adipisci nesciunt aperiam! Aliquam, commodi
+        dolorum.
+      </Counter>
+
+
     </div>
   );
 }

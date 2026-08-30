@@ -5,7 +5,7 @@ function Counter({ title, isActive, children, onShow }) {
     <div className="children">
       <h3 className="head-1">{title}</h3>
       {isActive ? (
-        <p className="para">{children}</p>
+        <div className="para">{children}</div>
       ) : (
         <button className="btn" onClick={onShow}>
           Show
