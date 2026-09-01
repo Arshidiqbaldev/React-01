@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className="parent">
-      <Counter 
+      <Counter
         title="About"
         isActive={activeIndex === 0}
         onShow={() => {
@@ -20,7 +20,6 @@ function App() {
       >
         With a population of about 2 million, Almaty is Kazakhstan's largest
         city. From 1929 to 1997, it was its capital city.
-
         <img src={viteSvg} alt={viteSvg} />
       </Counter>
 
@@ -35,9 +34,10 @@ function App() {
         perspiciatis ex assumenda id non, expedita, doloremque quia error
         cupiditate iusto eveniet, ad adipisci nesciunt aperiam! Aliquam, commodi
         dolorum.
+        <img src={vitefav} alt={vitefav} />
       </Counter>
 
-       <Counter
+      <Counter
         title="ipsum"
         isActive={activeIndex === 2}
         onShow={() => {
@@ -49,8 +49,6 @@ function App() {
         cupiditate iusto eveniet, ad adipisci nesciunt aperiam! Aliquam, commodi
         dolorum.
       </Counter>
-
-
     </div>
   );
 }
