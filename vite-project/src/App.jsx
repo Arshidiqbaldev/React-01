@@ -58,11 +58,28 @@ import Logout from "./component/Logout";
 function App() {
   const [isLogin, setLogin] = useState(false);
 
+  if (isLogin) {
+    return (
+      <div className="parent">
+        <Login
+          loginState="logOut Now"
+          setLogin={() => {
+            setLogin(false);
+          }}
+        >
+          <h1 className="head-1">you are login</h1>
+          <p className="para">your current state : Login </p>
+
+          <img src={viteSvg} alt="" />
+        </Login>
+      </div>
+    );
+  }
+
   return (
     <div className="parent">
-      {isLogin ? (
+      {/* {isLogin ? (
         <Login
-          
           loginState="logOut Now"
           setLogin={() => {
             setLogin(false);
@@ -83,7 +100,17 @@ function App() {
             setLogin(true);
           }}
         ></Logout>
-      )}
+      )} */}
+
+      <Logout
+        title="Login First "
+        state="LogOut"
+        loginState="logIn Now"
+        style={{ background: "#0000a0" }}
+        setLogin={() => {
+          setLogin(true);
+        }}
+      ></Logout>
     </div>
   );
 }
