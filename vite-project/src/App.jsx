@@ -68,9 +68,17 @@ function App() {
           }}
         >
           <h1 className="head-1">you are login</h1>
+
           <p className="para">your current state : Login </p>
 
           <img src={viteSvg} alt="" />
+
+          <p className="para">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias,
+            doloribus sequi! Voluptatem, similique necessitatibus minima optio
+            ut veritatis, quos vero nemo aliquid asperiores suscipit, fuga
+            laudantium esse iusto inventore quidem?
+          </p>
         </Login>
       </div>
     );
