@@ -76,8 +76,7 @@ function App() {
           <p className="para">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias,
             doloribus sequi! Voluptatem, similique necessitatibus minima optio
-            ut veritatis, quos vero nemo aliquid asperiores suscipit, fuga
-            laudantium esse iusto inventore quidem?
+            ut veritatis.
           </p>
         </Login>
       </div>
@@ -114,7 +113,7 @@ function App() {
         title="Login First "
         state="LogOut"
         loginState="logIn Now"
-        style={{ background: "#0000a0" }}
+        style={{ background: "#262631" }}
         setLogin={() => {
           setLogin(true);
         }}
