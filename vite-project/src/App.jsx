@@ -58,46 +58,9 @@ import Logout from "./component/Logout";
 function App() {
   const [isLogin, setLogin] = useState(false);
 
-  if (isLogin) {
-    return (
-      <div className="parent">
-        <Login
-          loginState="logOut Now"
-          setLogin={() => {
-            setLogin(false);
-          }}
-        >
-          <h1 className="head-1">you are login</h1>
-
-          <p className="para">your current state : Login </p>
-
-          <img src={viteSvg} alt="" />
-
-          <p className="para">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias,
-            doloribus sequi! Voluptatem, similique necessitatibus minima optio
-            ut veritatis.
-          </p>
-        </Login>
-      </div>
-    );
-  }
-
   return (
     <div className="parent">
-      {/* {isLogin ? (
-        <Login
-          loginState="logOut Now"
-          setLogin={() => {
-            setLogin(false);
-          }}
-        >
-          <h1 className="head-1">you are login</h1>
-          <p className="para">your current state : Login </p>
-
-          <img src={viteSvg} alt="" />
-        </Login>
-      ) : (
+      {!isLogin && (
         <Logout
           title="Login First "
           state="LogOut"
@@ -107,17 +70,26 @@ function App() {
             setLogin(true);
           }}
         ></Logout>
-      )} */}
+      )}
 
-      <Logout
-        title="Login First "
-        state="LogOut"
-        loginState="logIn Now"
-        style={{ background: "#262631" }}
+      <Login
+        loginState="logOut Now"
         setLogin={() => {
-          setLogin(true);
+          setLogin(false);
         }}
-      ></Logout>
+      >
+        <h1 className="head-1">you are login</h1>
+
+        <p className="para">your current state : Login </p>
+
+        <img src={viteSvg} alt="" />
+
+        <p className="para">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias,
+          doloribus sequi! Voluptatem, similique necessitatibus minima optio ut
+          veritatis
+        </p>
+      </Login>
     </div>
   );
 }
