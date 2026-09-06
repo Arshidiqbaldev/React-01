@@ -60,36 +60,36 @@ function App() {
 
   return (
     <div className="parent">
-      {!isLogin && (
+      {isLogin ? 
+        <Login
+          loginState="logOut Now"
+          setLogin={() => {
+            setLogin(false);
+          }}
+        >
+          <h1 className="head-1">you are login</h1>
+
+          <p className="para">your current state : Login </p>
+
+          <img src={viteSvg} alt="" />
+
+          <p className="para">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias,
+            doloribus sequi! Voluptatem, similique necessitatibus minima optio
+            ut veritatis
+          </p>
+        </Login>
+       : 
         <Logout
-          title="Login First "
+          title="Need Login First "
           state="LogOut"
           loginState="logIn Now"
-          style={{ background: "#0000a0" }}
+          style={{ background: "#2f2f3a" }}
           setLogin={() => {
             setLogin(true);
           }}
         ></Logout>
-      )}
-
-      <Login
-        loginState="logOut Now"
-        setLogin={() => {
-          setLogin(false);
-        }}
-      >
-        <h1 className="head-1">you are login</h1>
-
-        <p className="para">your current state : Login </p>
-
-        <img src={viteSvg} alt="" />
-
-        <p className="para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias,
-          doloribus sequi! Voluptatem, similique necessitatibus minima optio ut
-          veritatis
-        </p>
-      </Login>
+      }
     </div>
   );
 }
