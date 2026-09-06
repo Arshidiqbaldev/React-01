@@ -78,3 +78,21 @@
 }
 
 
+.card{
+  display: flex ;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: #212121;
+  border-radius: 10px;
+
+  span{
+
+    font-weight: 500;
+    color: red;
+    font-size: 2em;
+
+  }
+}

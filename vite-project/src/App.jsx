@@ -60,7 +60,7 @@ function App() {
 
   return (
     <div className="parent">
-      {isLogin ? 
+      {isLogin ? (
         <Login
           loginState="logOut Now"
           setLogin={() => {
@@ -78,8 +78,12 @@ function App() {
             doloribus sequi! Voluptatem, similique necessitatibus minima optio
             ut veritatis
           </p>
+
+          <div className="card">
+            <span className="red">07</span>
+          </div>
         </Login>
-       : 
+      ) : (
         <Logout
           title="Need Login First "
           state="LogOut"
@@ -89,7 +93,7 @@ function App() {
             setLogin(true);
           }}
         ></Logout>
-      }
+      )}
     </div>
   );
 }
