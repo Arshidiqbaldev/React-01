@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import Navbar from "./component/Navbar";
 import viteSvg from "./assets/hero.png";
-import vitefav from "./assets/vite.svg";
+import overLay from "./assets/overlay.png";
 import Hero from "./component/Hero";
 import Counter from "./component/Counter";
 import Login from "./component/Login";
@@ -102,16 +102,15 @@ import Logout from "./component/Logout";
 // export default App;
 
 function App() {
-  function handelClick(e) {
-    e.preventDefault();
-    alert("hi");
-  }
   return (
     <div className="parent">
-      <form onSubmit={handelClick}>
-        <input className="input-field" type="text" />
-        <button className="btn">Submit</button>
-      </form>
+      <div className="children">
+        <img
+          className="overlay"
+          src={overLay}
+          alt=""
+        />
+      </div>
     </div>
   );
 }

@@ -14,23 +14,42 @@
   align-items: center;
   flex-direction: column;
   gap: 10px;
-  
+  background-image: url("https://cdn.midjourney.com/03468384-a04c-4c1b-8a24-a18a93074989/0_0.png");
+  background-position: center center;
+  background-size: cover;
+
 }
 
 .children {
   width: 100%;
   display: flex;
-  max-width: 800px;
+  max-width: 80%;
+  min-height: 700px;
   flex-direction: column;
   gap: 1rem;
   align-items: center;
   text-align: center;
   justify-content: center;
-  padding: 3rem;
-  background: #1a1a1a;
+  background: #1a1a1a1d;
   color: rgb(178, 178, 178);
   border-radius: 8px;
   text-wrap: initial;
+  backdrop-filter: blur(5px);
+  will-change: auto;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(150, 107, 86, 0.289);
+}
+
+.overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  opacity: 0.2;
+  object-fit: cover;
+  
+
 }
 
 .para {
@@ -77,9 +96,8 @@
   color: orangered;
 }
 
-
-.card{
-  display: flex ;
+.card {
+  display: flex;
   flex-direction: column;
   width: 50%;
   align-items: center;
@@ -88,20 +106,15 @@
   background: #212121;
   border-radius: 10px;
 
-  span{
-
+  span {
     font-weight: 500;
     color: red;
     font-size: 2em;
-
   }
 }
 
-
-
-.input-field{
+.input-field {
   padding: 10px;
   border-radius: 14px;
   border: 1px solid gray;
-
 }
