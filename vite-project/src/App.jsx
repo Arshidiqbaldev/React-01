@@ -105,11 +105,18 @@ function App() {
   return (
     <div className="parent">
       <div className="children">
-        <img
-          className="overlay"
-          src={overLay}
-          alt=""
-        />
+        <img className="overlay" src={overLay} alt="" />
+
+        <div className="content">
+          <h1 className="head-1">Beauty </h1>
+          <p className="para">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+            officia omnis, fuga, quidem autem, facilis similique illum quaerat
+            odit nisi obcaecati delectus. Perferendis eligendi accusantium eos
+            dolor suscipit. Ea, perspiciatis.
+          </p>
+          <button className="btn">Join Wishlist</button>
+        </div>
       </div>
     </div>
   );

@@ -1,3 +1,5 @@
+@import url("https://fonts.cdnfonts.com/css/too-freakin-cute-demo");
+
 .root {
   display: flex;
   flex-direction: column;
@@ -17,7 +19,6 @@
   background-image: url("https://cdn.midjourney.com/03468384-a04c-4c1b-8a24-a18a93074989/0_0.png");
   background-position: center center;
   background-size: cover;
-
 }
 
 .children {
@@ -31,7 +32,7 @@
   text-align: center;
   justify-content: center;
   background: #1a1a1a1d;
-  color: rgb(178, 178, 178);
+  color: rgb(228, 228, 228);
   border-radius: 8px;
   text-wrap: initial;
   backdrop-filter: blur(5px);
@@ -39,41 +40,38 @@
   position: relative;
   overflow: hidden;
   border: 1px solid rgba(150, 107, 86, 0.289);
+  font-family: "Too Freakin Cute Demo", sans-serif;
 }
 
-.overlay{
+.overlay {
   position: absolute;
   width: 100%;
   height: 100%;
   inset: 0;
   opacity: 0.2;
   object-fit: cover;
-  
-
+  z-index: 1;
 }
 
-.para {
-  font-size: 0.875rem;
-  transition: all 300ms ease-in-out;
-  text-wrap: initial;
+.content {
+  z-index: 4;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 500px;
   gap: 1rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .head-1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   letter-spacing: -4%;
   word-spacing: -10%;
   color: whitesmoke;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-weight: 400;
   transition: all 300ms ease-in-out;
-  scale: 0.5;
-}
-
-.scale-1 {
-  scale: 1;
 }
 
 .btn,
@@ -83,9 +81,10 @@
   text-decoration: none;
   color: white;
   border-radius: 16px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   outline: none;
   border: none;
+  font-size: 1rem;
   font-family: inherit;
   font-weight: 600;
   cursor: pointer;
