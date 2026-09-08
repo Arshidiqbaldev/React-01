@@ -55,48 +55,63 @@ import Logout from "./component/Logout";
 //   );
 // }
 
-function App() {
-  const [isLogin, setLogin] = useState(false);
+// function App() {
+//   const [isLogin, setLogin] = useState(false);
 
+//   return (
+//     <div className="parent">
+//       {isLogin ? (
+//         <Login
+//           loginState="logOut Now"
+//           setLogin={() => {
+//             setLogin(false);
+//           }}
+//         >
+//           <h1 className="head-1">you are login</h1>
+
+//           <p className="para">your current state : Login </p>
+
+//           <img src={viteSvg} alt="" />
+
+//           <p className="para">
+//             Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias,
+//             doloribus sequi! Voluptatem, similique necessitatibus minima optio
+//             ut veritatis
+//           </p>
+
+//           <div className="card">
+//             <span className="red">07</span>
+//           </div>
+//         </Login>
+
+//       ) : (
+//         <Logout
+//           title="Need Login First "
+//           state="LogOut"
+//           loginState="logIn Now"
+//           style={{ background: "#2f2f3a" }}
+//           setLogin={() => {
+//             setLogin(true);
+//           }}
+//         ></Logout>
+//       )}
+//     </div>
+//   );
+// }
+
+// export default App;
+
+function App() {
+  function handelClick(e) {
+    e.preventDefault();
+    alert("hi");
+  }
   return (
     <div className="parent">
-      {isLogin ? (
-        <Login
-          loginState="logOut Now"
-          setLogin={() => {
-            setLogin(false);
-          }}
-        >
-          <h1 className="head-1">you are login</h1>
-
-          <p className="para">your current state : Login </p>
-
-          <img src={viteSvg} alt="" />
-
-          <p className="para">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias,
-            doloribus sequi! Voluptatem, similique necessitatibus minima optio
-            ut veritatis
-          </p>
-
-          <div className="card">
-            <span className="red">07</span>
-          </div>
-        </Login>
-        
-
-
-      ) : (
-        <Logout
-          title="Need Login First "
-          state="LogOut"
-          loginState="logIn Now"
-          style={{ background: "#2f2f3a" }}
-          setLogin={() => {
-            setLogin(true);
-          }}
-        ></Logout>
-      )}
+      <form onSubmit={handelClick}>
+        <input className="input-field" type="text" />
+        <button className="btn">Submit</button>
+      </form>
     </div>
   );
 }
