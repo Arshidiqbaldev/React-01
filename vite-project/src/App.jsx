@@ -1,123 +1,28 @@
 import React, { useState } from "react";
-import "./App.css";
-import Navbar from "./component/Navbar";
-import viteSvg from "./assets/hero.png";
-import overLay from "./assets/overlay.png";
-import Hero from "./component/Hero";
-import Counter from "./component/Counter";
-import Login from "./component/Login";
-import Logout from "./component/Logout";
-
-// function App() {
-//   const [activeIndex, setActiveIndex] = useState(0);
-
-//   return (
-//     <div className="parent">
-//       <Counter
-//         title="About"
-//         isActive={activeIndex === 0}
-//         onShow={() => {
-//           setActiveIndex(0);
-//         }}
-//       >
-//         With a population of about 2 million, Almaty is Kazakhstan's largest
-//         city. From 1929 to 1997, it was its capital city.
-//         <img src={viteSvg} alt={viteSvg} />
-//       </Counter>
-
-//       <Counter
-//         title="Lorem"
-//         isActive={activeIndex === 1}
-//         onShow={() => {
-//           setActiveIndex(1);
-//         }}
-//       >
-//         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum est hic
-//         perspiciatis ex assumenda id non, expedita, doloremque quia error
-//         cupiditate iusto eveniet, ad adipisci nesciunt aperiam! Aliquam, commodi
-//         dolorum.
-//         <img src={vitefav} alt={vitefav} />
-//       </Counter>
-
-//       <Counter
-//         title="ipsum"
-//         isActive={activeIndex === 2}
-//         onShow={() => {
-//           setActiveIndex(2);
-//         }}
-//       >
-//         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum est hic
-//         perspiciatis ex assumenda id non, expedita, doloremque quia error
-//         cupiditate iusto eveniet, ad adipisci nesciunt aperiam! Aliquam, commodi
-//         dolorum.
-//       </Counter>
-//     </div>
-//   );
-// }
-
-// function App() {
-//   const [isLogin, setLogin] = useState(false);
-
-//   return (
-//     <div className="parent">
-//       {isLogin ? (
-//         <Login
-//           loginState="logOut Now"
-//           setLogin={() => {
-//             setLogin(false);
-//           }}
-//         >
-//           <h1 className="head-1">you are login</h1>
-
-//           <p className="para">your current state : Login </p>
-
-//           <img src={viteSvg} alt="" />
-
-//           <p className="para">
-//             Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias,
-//             doloribus sequi! Voluptatem, similique necessitatibus minima optio
-//             ut veritatis
-//           </p>
-
-//           <div className="card">
-//             <span className="red">07</span>
-//           </div>
-//         </Login>
-
-//       ) : (
-//         <Logout
-//           title="Need Login First "
-//           state="LogOut"
-//           loginState="logIn Now"
-//           style={{ background: "#2f2f3a" }}
-//           setLogin={() => {
-//             setLogin(true);
-//           }}
-//         ></Logout>
-//       )}
-//     </div>
-//   );
-// }
-
-// export default App;
+import { useEffect } from "react";
 
 function App() {
+  const [count, setCount] = useState(0);
+
+  function handelClick() {
+     setCount(count + 1);
+  }
+
+  useEffect(() => {
+    alert("Count Render" + count);
+    console.log("render");
+
+    return () => {
+      alert("Count Unmounted" + count);
+      console.log("un render");
+    };
+  }, [count]);
+
   return (
     <div className="parent">
-      <div className="children">
-        <img className="overlay" src={overLay} alt="" />
-
-        <div className="content">
-          <h1 className="head-1">Beauty </h1>
-          <p className="para">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-            officia omnis, fuga, quidem autem, facilis similique illum quaerat
-            odit nisi obcaecati delectus. Perferendis eligendi accusantium eos
-            dolor suscipit. Ea, perspiciatis.
-          </p>
-          <button className="btn">Join Wishlist</button>
-        </div>
-      </div>
+      <h1>hello</h1>
+      <button onClick={handelClick}>Click</button>
+      <p>{count}</p>
     </div>
   );
 }
