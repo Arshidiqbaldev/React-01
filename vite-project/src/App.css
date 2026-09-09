@@ -24,8 +24,8 @@
 .children {
   width: 100%;
   display: flex;
-  max-width: 80%;
-  min-height: 700px;
+  max-width: 50%;
+  min-height: 600px;
   flex-direction: column;
   gap: 1rem;
   align-items: center;
