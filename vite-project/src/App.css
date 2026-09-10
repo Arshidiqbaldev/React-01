@@ -16,9 +16,8 @@
   align-items: center;
   flex-direction: column;
   gap: 10px;
-  background-image: url("https://cdn.midjourney.com/03468384-a04c-4c1b-8a24-a18a93074989/0_0.png");
-  background-position: center center;
-  background-size: cover;
+  background: #000;
+  
 }
 
 .children {

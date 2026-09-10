@@ -1,28 +1,14 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
-
+import Logger from "./component/Logger";
+import Timer from "./component/Timer";
+import "./App.css"
 function App() {
-  const [count, setCount] = useState(0);
-
-  function handelClick() {
-     setCount(count + 1);
-  }
-
-  useEffect(() => {
-    alert("Count Render" + count);
-    console.log("render");
-
-    return () => {
-      alert("Count Unmounted" + count);
-      console.log("un render");
-    };
-  }, [count]);
 
   return (
     <div className="parent">
-      <h1>hello</h1>
-      <button onClick={handelClick}>Click</button>
-      <p>{count}</p>
+     {/* <Logger/> */}
+     <Timer className="children"/>
     </div>
   );
 }
