@@ -24,8 +24,9 @@ function Timer(props) {
 
   return (
     <div className={props.className}>
-      <h1 className="head-1">{seconds} </h1>
-      <p className="para">{miliSeconds}</p>
+        <h1>ArShid</h1>
+      <h1 className="head-1">{seconds} <span className="para" >Sec</span> </h1>
+      <p className="para">{miliSeconds} <span>Milisec</span></p>
     </div>
   );
 }
