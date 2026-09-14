@@ -1,16 +1,12 @@
-import React from 'react';
-import "./Navbar.css"
+import React from "react";
+import Profile from "./Profile";
 
-
-function Navbar(props) {
+function Navbar() {
   return (
-    <header className='header' >
-
-        {props.children}
-      
-    </header>
-  )
+    <>
+      <Profile />
+    </>
+  );
 }
 
-export default Navbar
-
+export default Navbar;
