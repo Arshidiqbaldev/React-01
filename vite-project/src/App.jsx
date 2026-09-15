@@ -78,7 +78,7 @@ function App() {
   return (
     <div
       className="parent"
-      style={{ backgroundColor: theme === "light" ? "black" : "white" }}
+      style={{ backgroundColor: theme === "light" ? "white" : "black" }}
     >
       <UserContext.Provider value={{ theme, setTheme }}>
         <Navbar />

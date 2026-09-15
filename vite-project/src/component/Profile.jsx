@@ -14,7 +14,8 @@ function Profile() {
   }
   return (
     <div className="children">
-      <h1>{theme}</h1>
+      <h1 className={theme==="light"? "c1" : "c2"} >{theme}</h1>
+      <p className={theme==="light"? "c1" : "c2"} ></p>
       <button className="btn" onClick={toggleTheme}>
         Change
       </button>
