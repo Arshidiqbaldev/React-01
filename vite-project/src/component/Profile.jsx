@@ -3,23 +3,20 @@ import React, { useContext } from "react";
 import { UserContext } from "../App";
 
 function Profile() {
-  const { user, setUser } = useContext(UserContext);
+  const { theme, setTheme } = useContext(UserContext);
+
+  function toggleTheme() {
+    if (theme === "light") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  }
   return (
     <div className="children">
-      <h1 className="head-1">{user.name}</h1>
-      <p className="para">{user.lorem}</p>
-      <button
-        className="btn"
-        onClick={() => {
-          setUser({
-            name: "Ahmed",
-            rollNo: "12",
-            lorem:
-              "Lnsectetur adipisicing elit. Debitis, aut itaque quidem dolor adipisci incidunt temporibus, inventore doloribus voluptatibus consequuntur officiis aliquam, aspernatur non! Neque nemo dicta exercitationem voluptatum culpa.",
-          });
-        }}
-      >
-        Click
+      <h1>{theme}</h1>
+      <button className="btn" onClick={toggleTheme}>
+        Change
       </button>
     </div>
   );

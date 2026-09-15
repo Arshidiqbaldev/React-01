@@ -73,20 +73,14 @@ import Navbar from "./component/Navbar";
 const UserContext = createContext();
 
 function App() {
-  const [user, setUser] = useState({
-    name: "arshid",
-    rollNo: "10",
-    lorem:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, aut itaque quidem dolor adipisci incidunt temporibus, inventore doloribus voluptatibus consequuntur officiis aliquam, aspernatur non! Neque nemo dicta exercitationem voluptatum culpa.",
-  });
-
-  function handleClick(){
-    
-  }
+  const [theme, setTheme] = useState("light");
 
   return (
-    <div className="parent">
-      <UserContext.Provider value={{ user, setUser }}>
+    <div
+      className="parent"
+      style={{ backgroundColor: theme === "light" ? "black" : "white" }}
+    >
+      <UserContext.Provider value={{ theme, setTheme }}>
         <Navbar />
       </UserContext.Provider>
     </div>
