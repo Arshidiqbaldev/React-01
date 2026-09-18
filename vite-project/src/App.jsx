@@ -82,6 +82,7 @@ function App() {
     >
       <UserContext.Provider value={{ theme, setTheme }}>
         <Navbar />
+        <Timer/>
       </UserContext.Provider>
     </div>
   );

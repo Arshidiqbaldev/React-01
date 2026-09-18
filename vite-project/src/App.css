@@ -61,7 +61,7 @@
   font-family: inherit;
   font-weight: 500;
   cursor: pointer;
-  corner-shape: superellipse(2);
+  corner-shape: superellipse(-infinity);
 }
 
 .red-tag {
