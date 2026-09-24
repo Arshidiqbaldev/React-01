@@ -4,7 +4,7 @@ import Datafitch from "./component/Datafitch";
 import Panel from "./component/Panel";
 
 const App = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(1);
 
   return (
     <div className="parent">
@@ -15,19 +15,23 @@ const App = () => {
           setActiveIndex(0);
         }}
       >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus,
-        harum.
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate,
+          soluta?
+        </p>
       </Panel>
 
       <Panel
         title="Contact"
-        isActive={activeIndex === 1}
+        isActive={activeIndex === true}
         onShow={() => {
-          setActiveIndex(1);
+          setActiveIndex(true);
         }}
       >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto provident
-        sapiente omnis expedita est inventore.
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+          provident sapiente omnis expedita est inventore.
+        </p>
       </Panel>
     </div>
   );
