@@ -18,7 +18,7 @@ function Profile() {
     }
 
     setCar((previousState) => {
-      return { ...previousState, color: "blue" , model: "2000" , car : "Audi" };
+      return { ...previousState, color: "blue", model: "2000", car: "Audi" };
     });
   }
   return (

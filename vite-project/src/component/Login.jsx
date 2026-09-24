@@ -11,11 +11,7 @@ function Login(props) {
 
       <button className="btn" onClick={props.setLogin}>
         {props.loginState}
-        
       </button>
-
-    
-      
     </div>
   );
 }
