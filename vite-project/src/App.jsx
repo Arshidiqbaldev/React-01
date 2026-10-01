@@ -1,30 +1,20 @@
 import React, { useState } from "react";
 import "./App.css";
 
-import { useForm } from "react-hook-form";
-
 const App = () => {
-  const { register, handleSubmit } = useForm();
+  const [uName, usetName] = useState("");
 
-  function onSubmit(data) {
-    console.log(data);
+  function handleCLick(e) {
+    
+    usetName(e.target.value);
   }
 
   return (
     <div className="parent">
       <div className="children">
-        <form className="form" onSubmit={handleSubmit(onSubmit)}>
-          <input placeholder="name" {...register("name")} />
-          <input placeholder="email" {...register("email")} />
-          <input
-            placeholder="password"
-            type="password"
-            {...register("password")}
-          />
-          <button className="btn" type="submit">
-            Submit
-          </button>
-        </form>
+        <input type="text" value={uName} onChange={handleCLick} />
+
+        <h3>Name: {uName}</h3>
       </div>
     </div>
   );
