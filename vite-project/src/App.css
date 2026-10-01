@@ -115,10 +115,21 @@
 
   button {
     padding: 0.8rem;
-    background: red;
+    background: rgb(38, 37, 37);
     border: none;
     border-radius: 10px;
     text-transform: capitalize;
     cursor: pointer;
+  }
+}
+
+
+
+.err{
+  color: rgb(211, 211, 211);
+  font-size: 10px;
+
+  .symb{
+    color: red;
   }
 }
