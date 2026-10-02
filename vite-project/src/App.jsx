@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import "./App.css";
+import mySound from "../public/noti.mp3";
 
 const App = () => {
   const {
@@ -11,6 +12,16 @@ const App = () => {
     setValue,
     formState: { errors },
   } = useForm();
+
+  
+    const playSound =()=>{
+      const audio = new Audio(mySound);
+      audio.play()
+    }
+  
+
+
+  const [audio, setAudio] = useState({})
 
   function setValues() {
     setValue("name", "arshid");
@@ -56,6 +67,9 @@ const App = () => {
           />
 
           <p className="err">
+            
+
+            
             {errors.email && (
               <span>
                 {errors.email.message} <span className="symb">{symb}</span>
@@ -69,6 +83,8 @@ const App = () => {
         </form>
 
         <p>{name}</p>
+
+        <button onMouseEnter={playSound} >click</button>
       </div>
     </div>
   );
