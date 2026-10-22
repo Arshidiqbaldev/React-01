@@ -3,7 +3,7 @@ import React from "react";
 const Navbar = () => {
   return (
     <header className="flex w-full  justify-center border-y border-gray-200">
-      <nav className="flex w-full px-2  py-1 bg-white/35 justify-between  max-w-[80%] border-x border-gray-200 item">
+      <nav className="flex w-full px-2  py-2 bg-white/30 justify-between  max-w-[80%] border-x border-gray-300 item">
         <img
           src="https://xevenpixels.com/assets/xeven-pixels-fav.svg"
           alt=""
